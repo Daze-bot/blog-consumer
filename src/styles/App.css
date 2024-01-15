@@ -37,22 +37,32 @@ nav {
 }
 
 .nav-logo {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-logo p {
+  font-size: 1.4rem;
+}
+
+.post-header {
+  max-width: 50%;
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.nav-logo p {
-  font-size: 1.8rem;
-}
-
 .nav-links {
-  width: 50%;
+  width: 20%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10vw;
+  gap: 8vw;
 }
 
 .nav-links a,
