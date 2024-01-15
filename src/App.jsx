@@ -1,6 +1,6 @@
 import './styles/App.css';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Home from './components/Home';
+import Posts from './components/Posts';
 import Nav from './components/Nav';
 import PostPage from './components/PostPage';
 import ErrorPage from './components/ErrorPage';
@@ -34,17 +34,17 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <Posts 
+            setCurrentPost={setCurrentPost}
+          />,
         },
         {
           path: "/about",
           element: <About />
         },
         {
-          path: "/posts/:pageID",
-          element: <PostPage 
-            setCurrentPost={setCurrentPost}
-          />,
+          path: "/posts/:postID",
+          element: <PostPage />,
         }
       ]
     }
