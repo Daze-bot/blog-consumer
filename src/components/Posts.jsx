@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import PostSample from "./PostSample";
 
 const Posts = () => {
-  const [allPosts, setAllPosts] = useState({});
+  const [allPosts, setAllPosts] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3000/posts', {
@@ -11,20 +12,18 @@ const Posts = () => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setAllPosts(data.data);
       });
   }, []);
 
   return (
     <div className="posts">
-      {/* {allPosts.map((post) => (
-        <div key={post._id}>
-          <h2>{post.title}</h2>
-          <p>{post.text}</p>
-        </div>
-      ))} */}
-      Posts
+      {allPosts.map((post) => {
+        return <PostSample 
+          post={post}
+          key={post._id}
+        />
+      })}
     </div>
   )
 };

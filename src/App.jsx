@@ -5,22 +5,12 @@ import Nav from './components/Nav';
 import PostPage from './components/PostPage';
 import ErrorPage from './components/ErrorPage';
 import About from './components/About';
-import { useState } from 'react';
 
 const App = () => {
-  const [currentPost, setCurrentPost] = useState(null);
-
-  const handleNavClick = () => {
-    setCurrentPost(null);
-  }
-
   const NavWrapper = () => {
     return (
       <div className='app'>
-        <Nav 
-          currentPost={currentPost}
-          navClick={handleNavClick}
-        />
+        <Nav />
         <Outlet />
       </div>
     )
@@ -34,9 +24,7 @@ const App = () => {
       children: [
         {
           path: "/",
-          element: <Posts 
-            setCurrentPost={setCurrentPost}
-          />,
+          element: <Posts />,
         },
         {
           path: "/about",

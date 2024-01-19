@@ -2,6 +2,7 @@
   --amazon-blue: #131921;
   --link-blue: #0066C0;
   --content-bg: rgb(200, 200, 200);
+  --hover-orange: #c45500;
 }
 
 * {
@@ -21,6 +22,7 @@
 .app {
   min-height: 100vh;
   position: relative;
+  background-color: var(--content-bg);
 }
 
 nav {
@@ -37,7 +39,7 @@ nav {
 }
 
 .nav-logo {
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -45,20 +47,11 @@ nav {
 }
 
 .nav-logo p {
-  font-size: 1.4rem;
-}
-
-.post-header {
-  max-width: 50%;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  font-size: 1.8rem;
 }
 
 .nav-links {
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -86,4 +79,58 @@ nav {
   padding: 127px 64px 32px;
   background-color: var(--content-bg);
   color: black;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.posts a {
+  color: black;
+  text-decoration: none;
+}
+
+.post-sample {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 12px;
+  padding: 60px;
+  color: var(--link-blue);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background-color: var(--amazon-blue);
+}
+
+.post-sample:hover {
+  color: var(--hover-orange);
+  filter: brightness(140%);
+}
+
+.post-sample h3 {
+  font-size: 2rem;
+}
+
+.post-sample p {
+  color: white;
+}
+
+.post-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.post-page h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.post-date {
+  text-align: center;
+  margin-bottom: 80px;
 }
