@@ -10,6 +10,7 @@ const PostPage = () => {
 
   const [activePost, setActivePost] = useState({});
   const [postComments, setPostComments] = useState([]);
+  const [numComments, setNumComments] = useState(0);
 
   useEffect(() => {
     Promise.all([
@@ -22,6 +23,7 @@ const PostPage = () => {
     .then(([data1, data2]) => {
       setActivePost(data1.data);
       setPostComments(data2.data);
+      setNumComments(data2.data.length);
     })    
   }, []);
 
@@ -31,8 +33,10 @@ const PostPage = () => {
       <p className="post-date">Created: {moment(activePost.dateAdded).format('MMM D, YYYY')}</p>
       <p>{activePost.text}</p>
       <div className="post-comments">
-        <h2>Comments</h2>
-        <NewComment />
+        <h2>Comments ({numComments})</h2>
+        <NewComment 
+          postID={postID}
+        />
         {postComments.map((comment) => {
           return <CommentCard 
             comment={comment}

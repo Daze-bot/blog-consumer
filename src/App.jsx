@@ -4,7 +4,6 @@ import Posts from './components/Posts';
 import Nav from './components/Nav';
 import PostPage from './components/PostPage';
 import ErrorPage from './components/ErrorPage';
-import About from './components/About';
 
 const App = () => {
   const NavWrapper = () => {
@@ -25,10 +24,6 @@ const App = () => {
         {
           path: "/",
           element: <Posts />,
-        },
-        {
-          path: "/about",
-          element: <About />
         },
         {
           path: "/posts/:postID",

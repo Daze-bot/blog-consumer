@@ -7,7 +7,7 @@ const CommentCard = ({comment}) => {
     <div>
       <div className="user-comment">
         <h3>{comment.name}</h3>
-        <p>Created: {formattedDate}</p>
+        <p className="comment-date">{formattedDate}</p>
         <p>{comment.text}</p>
       </div>
     </div>
