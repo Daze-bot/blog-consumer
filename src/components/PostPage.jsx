@@ -30,7 +30,8 @@ const PostPage = () => {
   return (
     <div className="post-page">
       <h1>{activePost.title}</h1>
-      <p className="post-date">Created: {moment(activePost.dateAdded).format('MMM D, YYYY')}</p>
+      <p className="post-date">Created: {moment(activePost.createdAt).format('MMM D, YYYY')}</p>
+      <p className="post-date">Updated: {moment(activePost.updatedAt).format('MMM D, YYYY')}</p>
       <p>{activePost.text}</p>
       <div className="post-comments">
         <h2>Comments ({numComments})</h2>
