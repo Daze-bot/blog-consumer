@@ -10,7 +10,8 @@ const NewComment = ({postID}) => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     fetch(`http://localhost:3000/posts/${postID}/comments`, {
       method: 'POST',
       headers: {
