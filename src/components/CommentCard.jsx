@@ -1,7 +1,7 @@
 import moment from "moment";
 
 const CommentCard = ({comment}) => {
-  const formattedDate = moment(comment.dateAdded).format('MMM D, YYYY');
+  const formattedDate = moment(comment.createdAt).format('MMM D, YYYY');
 
   return (
     <div>
