@@ -8,7 +8,7 @@ const NewComment = ({postID}) => {
   });
 
   const handleSubmit = () => {
-    fetch(`http://localhost:3000/posts/${postID}/comments`, {
+    fetch(`https://daze-blog-api.fly.dev/posts/${postID}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
