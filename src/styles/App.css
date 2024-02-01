@@ -133,7 +133,10 @@ nav {
 
 .post-date {
   text-align: center;
-  margin-bottom: 80px;
+}
+
+.post-text {
+  margin-top: 40px;
 }
 
 .post-comments {
