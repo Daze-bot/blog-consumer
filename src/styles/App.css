@@ -237,3 +237,23 @@ form button:active {
   gap: 20px;
   padding: 20px;
 }
+
+.loader {
+  margin-top: 20vh;
+  border: 10px solid var(--content-bg);
+  border-top: 10px solid var(--link-blue);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  align-self: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  } 
+  100% {
+    transform: rotate(360deg);
+  }
+}
